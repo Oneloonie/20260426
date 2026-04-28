@@ -9,6 +9,16 @@
     "schema": "/opt/airflow/dags/analytics_database.db",
     "extra": ""
   },
+  "repository_raw_url": {
+    "conn_type": "http",
+    "description": "",
+    "login": "airflow",
+    "password": "airflow",
+    "host": "https://raw.githubusercontent.com/Oneloonie/20260426/main/",
+    "port": null,
+    "schema": "",
+    "extra": ""
+  },
   "sportsworldcentral_url": {
     "conn_type": "http",
     "description": "URL for calling the SportsWorldCentral API.",

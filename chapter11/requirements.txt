@@ -1,0 +1,10 @@
+setuptools
+pandas>=2.0
+streamlit>1.38.0
+httpx>=0.27.0
+matplotlib
+backoff>=2.2.1
+
+#create a small install script 
+# pin install -r requirements.txt 
+# pip install --no-deps nfl_data_py

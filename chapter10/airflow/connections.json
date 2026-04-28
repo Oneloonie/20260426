@@ -1,0 +1,22 @@
+{
+  "analytics_database": {
+    "conn_type": "sqlite",
+    "description": "Database to store local analytics data.",
+    "login": "airflow",
+    "password": "airflow",
+    "host": "",
+    "port": null,
+    "schema": "/opt/airflow/dags/analytics_database.db",
+    "extra": ""
+  },
+  "sportsworldcentral_url": {
+    "conn_type": "http",
+    "description": "URL for calling the SportsWorldCentral API.",
+    "login": "airflow",
+    "password": "airflow",
+    "host": "host.docker.internal",
+    "port": 8000,
+    "schema": "http",
+    "extra": ""
+  }
+}

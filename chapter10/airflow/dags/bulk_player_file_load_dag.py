@@ -9,7 +9,6 @@ from shared_functions import upsert_player_data
 
 def retrieve_bulk_player_file(**context):
     import httpx
-g
     local_file_path = "player_data_partial.parquet"
 
     http_conn_id = 'repository_raw_url'

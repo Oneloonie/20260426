@@ -1,4 +1,3 @@
-#these are overrides to the default docker compose
 x-airflow-common:
   &airflow-common
   environment:
@@ -12,9 +11,22 @@ services:
     environment:
       <<: *airflow-common-env
       AIRFLOW__WEBSERVER__ENABLE_PROXY_FIX: 'True'
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
   airflow-scheduler:
     <<: *airflow-common
     command: scheduler
     environment:
       <<: *airflow-common-env
       AIRFLOW__SCHEDULER__MIN_FILE_PROCESS_INTERVAL: '30'
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  airflow-worker:
+    <<: *airflow-common
+    command: celery worker
+    environment:
+      <<: *airflow-common-env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

@@ -9,13 +9,13 @@ from shared_functions import upsert_player_data
 
 def retrieve_bulk_player_file(**context):
     import httpx
-
+g
     local_file_path = "player_data_partial.parquet"
 
     http_conn_id = 'repository_raw_url'
     http_connection = BaseHook.get_connection(http_conn_id)
 
-    file_endpoint = "chapter10/player_data_partial.parquet"
+    file_endpoint = "chapter10/airflow/player_data_partial.parquet"
 
     file_url = f"{http_connection.host}{file_endpoint}"
 

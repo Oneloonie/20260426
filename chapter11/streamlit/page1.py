@@ -8,8 +8,8 @@ logger = logging.getLogger(__name__)
 st.header("SportsWorldCentral Data App")
 st.subheader("Team Rosters Page")
 
-base_url = st.session_state['https://improved-carnival-4jrr7pjrgxxw3q5gg-8000.app.github.dev/']
-                        
+base_url = st.session_state["base_url"]
+
 try:
     team_api_response = swc.call_api_endpoint(base_url,swc.LIST_TEAMS_ENDPOINT)
 

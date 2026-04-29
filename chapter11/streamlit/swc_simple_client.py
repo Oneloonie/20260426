@@ -25,7 +25,7 @@ def call_api_endpoint(
 ) -> httpx.Response:
 
     try:
-        with httpx.Client(base_url=base_url) as client: 
+        with httpx.Client(base_url=base_url,follow_redirects=True) as client: 
             logger.debug(f"base_url: {base_url}, api_endpoint: {api_endpoint}")
             response = client.get(api_endpoint, params=api_params)
             response.raise_for_status()

@@ -6,5 +6,5 @@ matplotlib
 backoff>=2.2.1
 
 #create a small install script 
-# pin install -r requirements.txt 
+# pip install -r requirements.txt 
 # pip install --no-deps nfl_data_py

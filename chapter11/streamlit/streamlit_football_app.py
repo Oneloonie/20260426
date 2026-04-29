@@ -4,7 +4,7 @@ import pandas as pd
 
 
 if 'base_url' not in st.session_state:
-    st.session_state['base_url'] = 'https://improved-carnival-4jrr7pjrgxxw3q5gg-8000.app.github.dev'
+    st.session_state['base_url'] = 'http://localhost:8000'
 
 logging.basicConfig(
     filename='football_app.log',  
